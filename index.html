@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .maintext {
+        text-align: center;
+        font: 40px Calibri;
+        color: rgb(34, 202, 146); }
+
+    img {
+        display: None;
+    }
+    
+    #s1:checked ~ #img1,
+    #s2:checked ~ #img2,
+    #s3:checked ~ #img3{
+        display: block;
+    }
+
+    
+</style>
+<body>
+    <h1 class="maintext">krossmarket</h1>
+
+    <input type="radio" name="r1" id="s1">
+    <input type="radio" name="r1" id="s2">
+    <input type="radio" name="r1" id="s3">
+
+    <img src="1.jpg" alt="img" id="img1" width="700px" height="500px">
+    <img src="dank.jpg" alt="img" id="img2" width="700px" height="500px">
+    <img src="3.jpg" alt="img" id="img3" width="700px" height="500px">
+</body>
+</html>
