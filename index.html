@@ -8,7 +8,7 @@
 <style>
     .maintext {
         text-align: center;
-        font: 40px Calibri;
+        font: bold 40px monospace;
         color: rgb(34, 202, 146); }
 
     img {
@@ -20,16 +20,30 @@
     #s3:checked ~ #img3{
         display: block;
     }
-
-    
+    .rr1   {
+        position: absolute;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.rr2   {
+        position: absolute;
+    left: 53%;
+    transform: translate(-50%,-50%);
+}
+.rr3   {
+        position: absolute;
+    left: 47%;
+    transform: translate(-50%,-50%);
+}
 </style>
+
 <body>
-    <h1 class="maintext">krossmarket</h1>
-
-    <input type="radio" name="r1" id="s1">
-    <input type="radio" name="r1" id="s2">
-    <input type="radio" name="r1" id="s3">
-
+    <h1 class="maintext">Krossmarket</h1>
+        <input type="radio" name="r1" class="rr1" id="s1">
+        <input type="radio" name="r1" class="rr2" id="s2">
+        <input type="radio" name="r1" class="rr3" id="s3">
+        <h2>Nike Dunk SB Low de la Soul</h2>
+        
     <img src="1.jpg" alt="img" id="img1" width="700px" height="500px">
     <img src="dank.jpg" alt="img" id="img2" width="700px" height="500px">
     <img src="3.jpg" alt="img" id="img3" width="700px" height="500px">
