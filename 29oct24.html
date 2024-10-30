@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #field{
+            width: 1080px;
+            height: 800px;
+            border: solid 1px;
+            background-image: url(img/22_full.jpg);
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div id="field" onclick="createZombie(event)"></div>
+    <script>
+        let field = document.getElementById('field');
+        function showCoord(event){
+        }
+        function createZombie(event){
+            console.log(event.clientX+':'+event.clientY);
+            let xz = document.createElement('img')
+            xz.src = "zombi-maiko-jason.gif"
+            document.body.append(xz);
+    
+            let left = event.clientX;
+            let step = 1; xz
+    
+            xz.style.position = 'fixed';
+            xz.style.top = event.clientY +'px'; 
+            xz.style.left = left + 'px';
+            
+            function moveXz(){
+                left = left + step;
+                if (left > 1000){
+                    step = step *(-1);
+                    xz.style.transform = 'rotateY(180deg)';
+                }
+                if (left < 0){
+                        step = step *(-1);
+                        xz.style.transform = 'rotateY(0deg)';
+                }
+                xz.style.left = left + 'px';
+            }
+            setInterval(moveXz, 25);
+        }
+    </script>
+</body>
+</html>
