@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let city_name = ['Щелково','Нью-Йорк','Токио','Рио-Де-Женейро','Дубайск']
+        let cost = ['500','750','920','650','110']
+
+        let diagram = document.createElement('div');
+        diagram.style.display = 'flex';
+        diagram.style.color = 'white';
+        diagram.style.alignItems = 'flex-end';
+        document.body.append(diagram);
+
+        for (let i=0; i < 5; i++){
+            let city = document.createElement('div');
+            city.style.width = '100px';
+            city.style.height = cost[i] + 'px';
+            city.style.background = 'black';
+            city.style.margin = '10px'
+            city.innerHTML = city_name[i] + '<br>' + cost[i];
+            diagram.append(city);
+        }
+    </script>
+
+   
+
+    
+</body>
+</html>
